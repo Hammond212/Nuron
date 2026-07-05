@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nuron — AI Infrastructure for Africa</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; }
+  .hero { background: linear-gradient(135deg, #EFEFEF 0%, #f5f0e8 100%); background-attachment: fixed; }
+  .text-roll { overflow: hidden; height: 20px; }
+  .text-roll-inner { transition: transform 500ms cubic-bezier(0.25,0.1,0.25,1); }
+  button:hover .text-roll-inner { transform: translateY(-100%); }
+  .arrow-icon { transition: transform 500ms cubic-bezier(0.25,0.1,0.25,1); }
+  button:hover .arrow-icon { transform: rotate(0deg); }
+  h1 { font-size: clamp(1.75rem, 7vw, 4.2rem); font-weight: 500; letter-spacing: -0.03em; line-height: 1.08; }
+  h2 { font-size: clamp(1.5rem, 4vw, 3.2rem); font-weight: 500; letter-spacing: -0.02em; line-height: 1.12; }
+  .image-overlay { position: relative; }
+  .image-overlay::after { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, transparent 30%, rgba(0,0,0,0.1) 100%); border-radius: inherit; }
+</style>
+</head>
+<body class="bg-white text-gray-900">
+
+<!-- HERO -->
+<section class="hero relative min-h-screen flex flex-col overflow-hidden">
+  <!-- Background image element -->
+  <div class="absolute inset-0 z-0 opacity-20">
+    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1600&q=80" alt="African tech" class="w-full h-full object-cover"/>
+  </div>
+  
+  <!-- NAV -->
+  <nav class="relative z-20 w-full">
+    <div class="max-w-[1440px] mx-auto p-2 sm:p-3">
+      <div class="bg-white rounded-full px-[5px] py-[5px] flex items-center justify-between">
+        <div class="flex items-center gap-6 pl-2">
+          <div class="w-9 h-9 sm:w-10 sm:h-10 bg-gray-900 rounded-full flex items-center justify-center">
+            <span class="text-white font-bold text-xs">NR</span>
+          </div>
+          <div class="hidden md:flex items-center gap-6">
+            <a href="#" class="text-sm text-gray-900 hover:text-gray-500 transition-colors">Products</a>
+            <a href="#" class="text-sm text-gray-900 hover:text-gray-500 transition-colors">How it works</a>
+            <a href="#" class="text-sm text-gray-900 hover:text-gray-500 transition-colors">API</a>
+            <a href="#" class="text-sm text-gray-900 hover:text-gray-500 transition-colors">Contact</a>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center gap-4">
+          <span class="text-xs text-gray-600 hidden lg:block">Building Africa's AI layer</span>
+          <button class="group inline-flex items-center gap-2 bg-gray-900 text-white text-xs font-medium rounded-full pl-5 pr-2 py-2">
+            <div class="text-roll"><div class="text-roll-inner"><div>Get early access</div><div>Get early access</div></div></div>
+            <div class="bg-white rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0"><svg class="w-3 h-3 text-gray-900 -rotate-45 arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg></div>
+          </button>
+        </div>
+        <button class="md:hidden bg-gray-900 text-white rounded-full p-2 mr-1">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Content -->
+  <div class="relative z-20 flex flex-col flex-1">
+    <div class="flex-1"></div>
+    <div class="max-w-[1440px] mx-auto w-full px-5 sm:px-8 lg:px-12 pb-14 sm:pb-16 lg:pb-20">
+      <p class="text-xs sm:text-sm text-gray-900 tracking-wide mb-5 sm:mb-8 uppercase">Nuron</p>
+      <h1 class="text-gray-900 mb-8 sm:mb-12">The AI infrastructure Africa runs on. Every channel, built for here.</h1>
+      <p class="text-sm sm:text-base text-gray-700 mb-8 max-w-xl">WhatsApp, SMS, USSD, voice calls, web, email, social. One API. Built for African connectivity, languages, and real business workflows.</p>
+      
+      <div class="flex flex-col sm:flex-row gap-4 sm:gap-5 items-start">
+        <button class="group inline-flex items-center gap-2 bg-[#F26522] hover:bg-[#e05a1a] text-white text-sm font-medium rounded-full pl-5 pr-2 py-2 transition-colors">
+          <div class="text-roll"><div class="text-roll-inner"><div>Get early access</div><div>Get early access</div></div></div>
+          <div class="bg-white rounded-full w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center flex-shrink-0">
+            <svg class="w-3.5 h-3.5 text-[#F26522] -rotate-45 arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
+          </div>
+        </button>
+        
+        <div class="flex items-center gap-2 bg-white rounded px-3 py-2 cursor-default shadow-sm hover:shadow-md transition-shadow">
+          <svg class="w-5 h-5 text-[#6B5CE7]" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="m19.6 66.5 19.7-11 .3-1-.3-.5h-1l-3.3-.2-11.2-.3L14 53l-9.5-.5-2.4-.5L0 49l.2-1.5 2-1.3 2.9.2 6.3.5 9.5.6 6.9.4L38 49.1h1.6l.2-.7-.5-.4-.4-.4L29 41l-10.6-7-5.6-4.1-3-2-1.5-2-.6-4.2 2.7-3 3.7.3.9.2 3.7 2.9 8 6.1L37 36l1.5 1.2.6-.4.1-.3-.7-1.1L33 25l-6-10.4-2.7-4.3-.7-2.6c-.3-1-.4-2-.4-3l3-4.2L28 0l4.2.6L33.8 2l2.6 6 4.1 9.3L47 29.9l2 3.8 1 3.4.3 1h.7v-.5l.5-7.2 1-8.7 1-11.2.3-3.2 1.6-3.8 3-2L61 2.6l2 2.9-.3 1.8-1.1 7.7L59 27.1l-1.5 8.2h.9l1-1.1 4.1-5.4 6.9-8.6 3-3.5L77 13l2.3-1.8h4.3l3.1 4.7-1.4 4.9-4.4 5.6-3.7 4.7-5.3 7.1-3.2 5.7.3.4h.7l12-2.6 6.4-1.1 7.6-1.3 3.5 1.6.4 1.6-1.4 3.4-8.2 2-9.6 2-14.3 3.3-.2.1.2.3 6.4.6 2.8.2h6.8l12.6 1 3.3 2 1.9 2.7-.3 2-5.1 2.6-6.8-1.6-16-3.8-5.4-1.3h-.8v.4l4.6 4.5 8.3 7.5L89 80.1l.5 2.4-1.3 2-1.4-.2-9.2-7-3.6-3-8-6.8h-.5v.7l1.8 2.7 9.8 14.7.5 4.5-.7 1.4-2.6 1-2.7-.6-5.8-8-6-9-4.7-8.2-.5.4-2.9 30.2-1.3 1.5-3 1.2-2.5-2-1.4-3 1.4-6.2 1.6-8 1.3-6.4 1.2-7.9.7-2.6v-.2H49L43 72l-9 12.3-7.2 7.6-1.7.7-3-1.5.3-2.8L24 86l10-12.8 6-7.9 4-4.6-.1-.5h-.3L17.2 77.4l-4.7.6-2-2 .2-3 1-1 8-5.5Z"/></svg>
+          <span class="text-xs sm:text-sm font-medium text-gray-900">Africa-first</span>
+          <span class="text-[10px] sm:text-xs bg-gray-900 text-white px-2 py-0.5 rounded font-medium">BOTSWANA</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="bg-white pt-16 sm:pt-20 lg:pt-32 pb-12 sm:pb-16 lg:pb-24">
+  <div class="max-w-[1440px] mx-auto">
+    <div class="px-5 sm:px-8 lg:px-12 flex items-center gap-3 mb-6 sm:mb-8">
+      <div class="w-6 h-6 rounded-full bg-gray-900 text-white flex items-center justify-center text-xs font-semibold">1</div>
+      <span class="text-xs sm:text-sm font-medium border border-gray-200 rounded-full px-3 sm:px-4 py-1">Why Nuron</span>
+    </div>
+    <h2 class="px-5 sm:px-8 lg:px-12 text-gray-900 mb-12 sm:mb-16 lg:mb-28">Built for Africa. Built for now.</h2>
+    
+    <div class="lg:hidden px-5 sm:px-8">
+      <p class="text-sm sm:text-base leading-relaxed font-medium text-gray-900 mb-6">Every AI tool built today assumes fast broadband and English speakers. Africa needs different. Nuron understands Setswana, Zulu, and 9+ African languages. It works on 2G. It integrates WhatsApp, SMS, USSD, voice, email, and web — the channels your customers actually use.</p>
+      <button class="group inline-flex items-center gap-2 bg-[#F26522] hover:bg-[#e05a1a] text-white text-sm font-medium rounded-full pl-5 pr-2 py-2 transition-colors mb-8">
+        <div class="text-roll"><div class="text-roll-inner"><div>Learn more</div><div>Learn more</div></div></div>
+        <div class="bg-white rounded-full w-7 h-7 flex items-center justify-center"><svg class="w-3.5 h-3.5 text-[#F26522] -rotate-45 arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg></div>
+      </button>
+      <div class="flex flex-col gap-4">
+        <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=600&q=80" alt="Mobile commerce in Africa" class="rounded-2xl object-cover h-64"/>
+        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80" alt="Team collaboration" class="rounded-2xl object-cover h-64"/>
+      </div>
+    </div>
+
+    <div class="hidden lg:grid grid-cols-[32%_1fr_32%] items-center gap-8 px-12">
+      <div class="image-overlay">
+        <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=500&q=80" alt="Mobile-first Africa" class="w-full rounded-2xl object-cover aspect-[4/5]"/>
+      </div>
+      <div class="flex flex-col gap-6">
+        <p class="text-base leading-relaxed font-medium text-gray-900">
+          African businesses run on WhatsApp and mobile money. No credit cards. Limited data. Intermittent connectivity. Every other AI platform ignores this reality.
+        </p>
+        <p class="text-base leading-relaxed font-medium text-gray-700">
+          Nuron is built from the ground up for how Africa actually works. One API, every channel, every language.
+        </p>
+        <button class="group inline-flex items-center gap-2 bg-[#F26522] hover:bg-[#e05a1a] text-white text-sm font-medium rounded-full pl-5 pr-2 py-2 transition-colors w-fit">
+          <div class="text-roll"><div class="text-roll-inner"><div>Learn more</div><div>Learn more</div></div></div>
+          <div class="bg-white rounded-full w-7 h-7 flex items-center justify-center"><svg class="w-3.5 h-3.5 text-[#F26522] -rotate-45 arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg></div>
+        </button>
+      </div>
+      <div class="image-overlay">
+        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&q=80" alt="Team and collaboration" class="w-full rounded-2xl object-cover aspect-square"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="bg-[#F5F5F5] pt-16 sm:pt-20 lg:pt-28 pb-16 sm:pb-20 lg:pb-28">
+  <div class="max-w-[1440px] mx-auto">
+    <div class="px-5 sm:px-8 lg:px-12 flex items-center gap-3 mb-6 sm:mb-8">
+      <div class="w-6 h-6 rounded-full bg-gray-900 text-white flex items-center justify-center text-xs font-semibold">2</div>
+      <span class="text-xs sm:text-sm font-medium border border-gray-300 rounded-full px-3 sm:px-4 py-1">Deployed & live</span>
+    </div>
+    <h2 class="px-5 sm:px-8 lg:px-12 text-gray-900 mb-10 sm:mb-14 lg:mb-16">AI that works on every channel</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6 lg:gap-7 px-5 sm:px-8 lg:px-12">
+      <!-- WhatsApp Agent Card -->
+      <div>
+        <div class="relative aspect-[329/246] rounded-2xl overflow-hidden group cursor-pointer">
+          <img src="https://images.unsplash.com/photo-1611532736579-6b16e2b50449?w=600&q=80" alt="WhatsApp messaging" class="w-full h-full object-cover"/>
+          <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/40"></div>
+          <div class="absolute bottom-4 left-4 right-4">
+            <p class="text-white text-sm font-semibold">WhatsApp AI Agent</p>
+            <p class="text-white/80 text-xs mt-1">Live on Uniplace.co.bw</p>
+          </div>
+        </div>
+        <p class="text-xs sm:text-sm text-gray-600 mt-4">Deployed and live on Uniplace. Handles seller inquiries, buyer negotiations, and 24/7 follow-ups without human input.</p>
+        <p class="text-sm sm:text-base font-semibold text-gray-900 mt-2">WhatsApp Agent</p>
+      </div>
+
+      <!-- Omnichannel Card -->
+      <div>
+        <div class="relative aspect-square rounded-2xl overflow-hidden group cursor-pointer">
+          <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80" alt="Multi-channel communication" class="w-full h-full object-cover"/>
+          <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/40"></div>
+          <div class="absolute bottom-4 left-4 right-4">
+            <p class="text-white text-sm font-semibold">Omnichannel AI</p>
+            <p class="text-white/80 text-xs mt-1">Every channel. One API.</p>
+          </div>
+        </div>
+        <p class="text-xs sm:text-sm text-gray-600 mt-4">SMS, USSD, voice calls, web chat, email, TikTok, Instagram, LinkedIn — one unified AI infrastructure powers them all.</p>
+        <p class="text-sm sm:text-base font-semibold text-gray-900 mt-2">Omnichannel AI</p>
+      </div>
+    </div>
+
+    <!-- Use Case Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5 px-5 sm:px-8 lg:px-12 mt-12">
+      <div class="bg-white rounded-xl p-5 sm:p-6">
+        <div class="text-3xl mb-3">🏨</div>
+        <h4 class="font-semibold text-gray-900 mb-2 text-sm">Safari Operators</h4>
+        <p class="text-xs text-gray-600">Respond to tourist inquiries over WhatsApp in English and Setswana. Book tours. Handle payments via mobile money.</p>
+      </div>
+      <div class="bg-white rounded-xl p-5 sm:p-6">
+        <div class="text-3xl mb-3">💄</div>
+        <h4 class="font-semibold text-gray-900 mb-2 text-sm">Salons & Barbershops</h4>
+        <p class="text-xs text-gray-600">AI schedules appointments via SMS/WhatsApp. Sends reminders. Handles cancellations and rebooking automatically.</p>
+      </div>
+      <div class="bg-white rounded-xl p-5 sm:p-6">
+        <div class="text-3xl mb-3">🛒</div>
+        <h4 class="font-semibold text-gray-900 mb-2 text-sm">Retailers & E-commerce</h4>
+        <p class="text-xs text-gray-600">AI qualifies leads from Facebook ads, processes orders via WhatsApp, collects payment via Orange Money or MyZaka.</p>
+      </div>
+    </div>
+
+    <!-- Waitlist -->
+    <div class="px-5 sm:px-8 lg:px-12 mt-16 sm:mt-20">
+      <div class="bg-gray-900 rounded-2xl p-8 sm:p-12 text-center">
+        <h3 class="text-white font-medium tracking-tight mb-3" style="font-size: clamp(1.5rem, 3vw, 2.5rem)">Africa's AI layer starts here</h3>
+        <p class="text-gray-400 mb-8 text-sm">Join the waitlist. Be first to build on Nuron when we open access.</p>
+        <div class="flex gap-3 max-w-md mx-auto flex-wrap justify-center">
+          <input type="email" placeholder="your@email.com" class="flex-1 min-w-[200px] bg-white/10 border border-white/20 text-white placeholder-gray-500 rounded-full px-5 py-3 text-xs outline-none focus:border-white/40"/>
+          <button class="bg-white text-gray-900 font-semibold text-xs rounded-full px-6 py-3 hover:bg-gray-100 transition-colors">Get early access</button>
+        </div>
+        <p class="text-gray-600 text-xs mt-4">No spam. Early access only. Unsubscribe anytime.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-white border-t border-gray-100 px-5 sm:px-8 lg:px-12 py-8 flex items-center justify-between flex-wrap gap-4 max-w-[1440px] mx-auto">
+  <div class="flex items-center gap-2">
+    <div class="w-7 h-7 bg-gray-900 rounded-full flex items-center justify-center"><span class="text-white font-bold text-[10px]">NR</span></div>
+    <span class="text-xs sm:text-sm font-medium text-gray-900">Nuron</span>
+  </div>
+  <p class="text-xs text-gray-500">Building Africa's AI infrastructure. Starting in Botswana.</p>
+  <p class="text-xs text-gray-400">© 2026 Nuron</p>
+</footer>
+
+</body>
+</html>
