@@ -416,8 +416,13 @@ async function createAgent(e) {
   const channel = document.getElementById('agentChannel').value;
 
   try {
+    // Always get fresh session to ensure we have a valid user_id
+    const { data: sessionData } = await sb.auth.getSession();
+    const userId = sessionData?.session?.user?.id;
+    if (!userId) throw new Error('Not authenticated');
+
     const { error } = await sb.from('agents').insert({
-      user_id: currentUser.id,
+      user_id: userId,
       name,
       description,
       channel
@@ -428,8 +433,9 @@ async function createAgent(e) {
     closeCreateAgentModal();
     loadAgents();
     document.getElementById('createAgentForm').reset();
-  } catch (e) {
-    showToast('Error creating agent');
+  } catch (err) {
+    console.error('Create agent error:', err);
+    showToast('Error: ' + err.message);
   }
 }
 
